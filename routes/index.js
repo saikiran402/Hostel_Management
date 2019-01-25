@@ -6,9 +6,9 @@ const express = require("express"),
     Student = require("../models/student"),
     Feedback = require("../models/feedback"),
     Attendance = require("../models/attendance"),
-    Rooms = require("../models/room"),
     Room = require("../models/room"),
     middleware = require("../middleware");
+var mongoose = require("mongoose");
 // root route
 router.get('/', (req, res) => res.render("home"));
 
@@ -187,66 +187,34 @@ router.get("/logout", (req, res) => {
     res.redirect("/");
 });
 
+router.get("/addroom", middleware.isLoggedIn, (req, res) => res.render("addRoom"));
 
+router.post("/addroom", middleware.isLoggedIn, (req, res) => {
 
+    var room = req.body.roomn;
+    var ac = req.body.ac;
+    var limit = req.body.limit;
 
-router.get('/attendance', middleware.isLoggedIn, (req, res) => {
-    Rooms.find({}, function (err, list) {
+    var newRoom = { ac: ac, room: room, limit: limit }
+    Room.create(newRoom, function (err, newlyCreated) {
         if (err) {
             console.log(err);
         } else {
-            res.render("attendance", { list: list });
-        }
-    });
-});
-
-router.post("/attendance", middleware.isLoggedIn, (req, res) => {
-
-
-    var available = req.body.a;
-    var name = req.body.name;
-    var room = req.body.room;
-    var author = {
-        id: req.user._id,
-        username: req.user.username
-    }
-    var newItem = { name: name, room: room, available: available, author: author }
-    Attendance.create(newItem, function (err, newlyCreated) {
-        if (err) {
-            console.log(err);
-        } else {
-            req.flash("success Posted");
-            res.redirect("/attendance");
-
+            req.flash("success", newRoom.room + " is successfully added");
+            res.redirect("/addroom");
         }
     })
 });
 
-
-router.get('/absent', middleware.isLoggedIn, (req, res) => {
-    Attendance.find({}, function (err, list) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render("absent", { list: list });
-        }
-    });
-});
-
-
-
 router.get('/addstudent', middleware.isLoggedIn, (req, res) => {
-    Rooms.find({}, function (err, list) {
+    Room.find({}, function (err, list) {
         if (err) {
             console.log(err);
         } else {
-            res.render("StudentRegister", { list: list });
+            res.render("addStudent", { list: list });
         }
     });
 });
-
-
-
 
 router.post("/addstudent", middleware.isLoggedIn, (req, res) => {
 
@@ -256,70 +224,109 @@ router.post("/addstudent", middleware.isLoggedIn, (req, res) => {
     var room = req.body.room;
     var roll = req.body.roll;
 
-    var newItem = { name: name, email: email, phone: phone, room: room, roll: roll }
-    Student.create(newItem, function (err, newlyCreated) {
+    var newStudent = { username: name, name: name, email: email, phone: phone, room: room, roll: roll }
+    Student.create(newStudent, function (err, newlyCreated) {
         if (err) {
             console.log(err);
         } else {
-            req.flash("success", newItem.name + " is successfully added");
-            res.redirect("/");
+            req.flash("success", newStudent.name + " is successfully added");
+            Room.findByIdAndUpdate(req.body.room).exec(function (err, list) {
+                if (err) { console.log(err); }
+                else {
+                    console.log(list);
+                    list.student.push(name);
+                    console.log(list);
+                    list.save();
+                    res.redirect("/addstudent");
+                }
+            })
         }
     })
 });
 
 
-router.get('/showstudent', middleware.isLoggedIn, (req, res) => {
-    Student.find({}, function (err, list) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render("showstudent", { list: list });
-        }
-    });
-});
-
-router.get("/addroom", middleware.isLoggedIn, (req, res) => res.render("addroom"));
-
-router.post("/addroom", middleware.isLoggedIn, (req, res) => {
-
-    var room = req.body.roomn;
-    var ac = req.body.ac;
-
-
-    var newItem = { ac: ac, room: room }
-    Room.create(newItem, function (err, newlyCreated) {
-        if (err) {
-            console.log(err);
-        } else {
-            req.flash("success", newItem.room + " is successfully added");
-            res.redirect("/");
-        }
-    })
-});
-
-router.get('/showrooms', middleware.isLoggedIn, (req, res) => {
+router.get('/attendance', middleware.isLoggedIn, (req, res) => {
     Room.find({}, function (err, list) {
         if (err) {
             console.log(err);
         } else {
-            res.render("showrooms", { list: list });
+            res.render("addAttendance", { list: list });
         }
     });
 });
 
+// router.post("/attendance", middleware.isLoggedIn, (req, res) => {
 
-router.get("/post", middleware.isLoggedIn, (req, res) => res.render("post"));
 
-router.post('/post', middleware.isLoggedIn, (req, res) => {
+//     var available = req.body.a;
+//     var name = req.body.name;
+//     var room = req.body.room;
+//     var author = {
+//         id: req.user._id,
+//         username: req.user.username
+//     }
+//     var newItem = { name: name, room: room, available: available, author: author }
+//     Attendance.create(newItem, function (err, newlyCreated) {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             req.flash("success Posted");
+//             res.redirect("/attendance");
 
-    Student.find({ room: req.body.room }, function (err, list) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render("post", { list: list });
-        }
-    });
-});
+//         }
+//     })
+// });
+
+
+// router.get('/absent', middleware.isLoggedIn, (req, res) => {
+//     Attendance.find({}, function (err, list) {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             res.render("absent", { list: list });
+//         }
+//     });
+// });
+
+
+
+
+
+
+// router.get('/showstudent', middleware.isLoggedIn, (req, res) => {
+//     Student.find({}, function (err, list) {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             res.render("showstudent", { list: list });
+//         }
+//     });
+// });
+
+
+// router.get('/showrooms', middleware.isLoggedIn, (req, res) => {
+//     Room.find({}, function (err, list) {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             res.render("showrooms", { list: list });
+//         }
+//     });
+// });
+
+
+// router.get("/post", middleware.isLoggedIn, (req, res) => res.render("post"));
+
+// router.post('/post', middleware.isLoggedIn, (req, res) => {
+
+//     Student.find({ room: req.body.room }, function (err, list) {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             res.render("post", { list: list });
+//         }
+//     });
+// });
 
 
 module.exports = router;
