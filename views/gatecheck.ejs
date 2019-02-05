@@ -1,3 +1,4 @@
+
 <% include ./partials/header %>
 <!DOCTYPE html>
 <html>
@@ -20,19 +21,27 @@
         <th scope="col">Name</th>
         <th scope="col">Reason</th>
         <th scope="col">Permission</th>
-        <th scope="col">Delete</th>
+        <th scope="col">OUT</th>
+        <th scope="col">IN</th>
       </tr>
     </thead>
     <tbody>
             <% var i=1;list.forEach(list => {%>
       <tr>
+        <%if(list.Permission == false){}else{%>
+        <%if(list.checkin == null){%>
         <th scope="row"><%=i++%></th>
         <td><%=list.names%></td>
         <td><%=list.Reason%></td>
         <td><%=list.Permission%></td>
-        <form action="/<%= list._id %>/gatecheck/?_method=DELETE" method="POST"><td><input type = "submit" value="Delete" /></td></form> 
-      </tr>
+        <form action="/<%= list._id %>/gatecheckout" method="POST"><td><%if(list.checkedout !== null){%><%=list.checkedout%><%}else{%><input type = "submit" value="checkedOUT" /></td><%}%></form> 
+        <form action="/<%= list._id %>/gatecheckin" method="POST"><td><%if(list.checkin !== null){%><%=list.checkin%><%}else{%><input type = "submit" value="CheckedIN" /></td><%}%></form> 
+        </tr>
+        <%}else{}%>
+        <%}%>
       <% })%>
+
+      
       
     </tbody>
   </table>

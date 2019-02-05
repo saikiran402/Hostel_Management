@@ -1,45 +1,48 @@
 <% include partials/header %>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <link href="https://getbootstrap.com/docs/4.2/examples/album/album.css" rel="stylesheet">
 </head>
 <div class="album py-5 bg-light">
     <div class="container">
-
-        <div class="row">
-            <%list.forEach(list =>{%>
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-
-                    <div class="card-body">
-                        <h5 class="card-title text-center">
-                            <%=list.room%>
-                        </h5>
-                        <%for(let i =0;i < list.student.length;i++){%>
-                        <div class="card" style="width: 18rem;">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <%=list.student[i]%>
-                                    <input type="checkbox"  style="float: right" checked>
-                                </li>
-
-                            </ul>
+        <form action="/attendance" method="POST">
+            <div class="row">
+                <%list.forEach(list =>{%>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                <%=list.room%>
+                            </h5>
+                            <%for(let i =0;i < list.roll.length;i++){%>
+                            <div class="card" style="width: 18rem;">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <input type="text" name="attendance[{}]" style="border-width: 0px;" value="<%=list.roll[i]%>"
+                                            readonly>
+                                        <input type="checkbox" name="attendance[{}]" value="true" style="float: right"
+                                            checked>
+                                    </li>
+                                </ul>
+                            </div>
+                            <%}%>
+                            <br>
                         </div>
-                        <%}%>
-                        <br>
-                        <button type="submit" class="btn btn-success">POST</button>
                     </div>
                 </div>
+                <nav class="navbar fixed-bottom navbar-light bg-light">
+                    <button class="navbar-item btn btn-success" type="submit">Post</button>
+                </nav>
+                <%})%>
             </div>
-            <%})%>
-        </div>
+        </form>
     </div>
 </div>
-<nav class="navbar fixed-bottom navbar-light bg-light">
-    <a class="navbar-item btn btn-success" href="/post">Post</a>
-</nav>
-</main>
 
+</main>
+<script>
+
+</script>
 
 
 

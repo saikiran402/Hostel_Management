@@ -1,54 +1,27 @@
 <% include ./partials/header %>
-<style>
-.form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: 0 auto;
-}
-.form-signin .checkbox {
-    font-weight: 400;
-}
-.form-signin .form-control {
-    position: relative;
-    box-sizing: border-box;
-    height: auto;
-    padding: 10px;
-    font-size: 16px;
-}
-.form-signin .form-control:focus {
-    z-index: 2;
-}
-.form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+<script type="text/javascript" src="/js/time.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <body class="text-center">
     <link href="https://getbootstrap.com/docs/4.2/examples/album/album.css" rel="stylesheet">
     <main role="main">
         <% if (!currentUser) { %>
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
             Welcome to <strong> Hostel Management System</strong> check readme for more information
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-        </div>
-        <img class="mb-4" src="images/prayer-beads.svg" alt="" width="72" height="72">
+        </div> -->
         <h1 class="h3 mb-3 font-weight-normal">Welcome to Student/Parent Portal</h1>
         <nav>
-          <div class="nav nav-tabs text-center" id="nav-tab" role="tablist">
+       <!--    <div class="nav nav-tabs text-center" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Student</a>
             <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Parent</a>
             <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Admin</a>
-        </div>
+        </div> -->
     </nav>
 
     <div class="tab-content" id="nav-tabContent">
@@ -56,7 +29,7 @@
 
         <form class="form-signin" method="post" action="/login">
             <img class="mb-4" src="images/prayer-beads.svg" alt="" width="72" height="72">
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in<br>(Student) </h1>
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in<br> </h1>
 
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
@@ -68,10 +41,6 @@
             </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block">Sign in</button>
-
-
-
-
     </form>
 
 
@@ -117,9 +86,232 @@
 
 <% }else if (currentUser.isAdmin) { %>
 
+  <section id="team" class="pb-5">
+      <div class="container">
+          <h5 class="section-title h1">Welcome to HOSTEL Management</h5>
+          <div class="row">
+              <!-- ATTENDANCE -->
+              <div class="bestSnippArea1073">
+              	<div class="container">
+              		<div class="row">
+                    <!-- gate check-->
 
+                    <div class="col-md-3 col-sm-6">
+              				<div class="bsBox">
+              					<div class="x_car_offer_main_boxes_wrapper">
+              						<div class="x_car_offer_starts">
+
+              						</div>
+              						<div class="x_car_offer_img">
+              							<img src="/img/gate.png" alt="img">
+              						</div>
+              						<div class="x_car_offer_price">
+              							<div class="x_car_offer_price_inner">
+              							<h6>
+              								<h3>2019</h3>
+              								<p><span>FEB</span>
+              									<br>/ 02</p>
+              							</div>
+              						</div>
+              						<div class="x_car_offer_heading"><br>
+              							<h2><a href="#">GATE PASS</a></h2>
+              							<p>Boys Hostel</p>
+              						</div>
+              						<div class="x_car_offer_heading">
+              							<ul>
+              								<li class="present"><a href="#"><i class="fa fa-long-arrow-right "></i> &nbsp;4</a>
+                              </li>
+                              <li class="absent"><a href="#"><i class="fa fa-long-arrow-left "></i> &nbsp;4</a></li>
+              								<li>
+                                <li>
+                                  <a href="#"><i class="fa fa-calendar "></i> <p><strong>FEB</strong>
+              									 02</p></a>
+                               </li>
+                               <li>
+                               <a href="#"><i class="fa fa-clock-o "></i><p><strong>02:00</strong>
+                              PM</p></a>
+                               </li>
+              							</ul>
+              						</div>
+              						<div class="x_car_offer_bottom_btn">
+              							<ul>
+              								<li><a href="/gatecheck">&nbsp;<i class="fa fa-check-square "></i>&nbsp;</a>
+              								</li>
+              								<li><a href="/approve">Show</a>
+              								</li>
+              							</ul>
+              						</div>
+              					</div>
+              				</div>
+              			</div>
+                    <!--  -->
+                    <div class="col-md-3 col-sm-6">
+              				<div class="bsBox">
+              					<div class="x_car_offer_main_boxes_wrapper">
+              						<div class="x_car_offer_starts">
+
+              						</div>
+              						<div class="x_car_offer_img">
+              							<img src="/img/room.png" alt="img">
+              						</div>
+              						<div class="x_car_offer_price">
+              							<div class="x_car_offer_price_inner">
+              							<h6>
+              								<h3>2019</h3>
+              								<p><span>FEB</span>
+              									<br>/ 02</p>
+              							</div>
+              						</div>
+              						<div class="x_car_offer_heading"><br>
+              							<h2><a href="#">Room Details</a></h2>
+              							<p>Boys Hostel</p>
+              						</div>
+              						<div class="x_car_offer_heading">
+              							<ul>
+              								<li class="present"><a href="#"><i class="fa fa-bed"></i> &nbsp;4</a>
+
+
+                              </li>
+                              <li class="absent"><a href="#"><i class="fa fa-signal"></i> &nbsp;4</a></li>
+              								<li>
+                                <li>
+                                  <a href="#"><i class="fa fa-calendar "></i> <p><strong>FEB</strong>
+              									 02</p></a>
+                               </li>
+                               <li>
+                               <a href="#"><i class="fa fa-clock-o "></i><p><strong>02:00</strong>
+                              PM</p></a>
+                               </li>
+              							</ul>
+              						</div>
+              						<div class="x_car_offer_bottom_btn">
+              							<ul>
+              								<li><a href="/addroom">&nbsp;<i class="fa fa-plus "></i>&nbsp;</a>
+              								</li>
+              								<li><a href="/showrooms">Show</a>
+              								</li>
+              							</ul>
+              						</div>
+              					</div>
+              				</div>
+              			</div>
+                    <!--  STUDENT data-->
+                    <div class="col-md-3 col-sm-6">
+              				<div class="bsBox">
+              					<div class="x_car_offer_main_boxes_wrapper">
+              						<div class="x_car_offer_starts">
+
+              						</div>
+              						<div class="x_car_offer_img">
+              							<img src="/img/user.png" alt="img">
+              						</div>
+              						<div class="x_car_offer_price">
+              							<div class="x_car_offer_price_inner">
+              							<h6>
+              								<h3>2019</h3>
+              								<p><span>FEB</span>
+              									<br>/ 02</p>
+              							</div>
+              						</div>
+              						<div class="x_car_offer_heading"><br>
+              							<h2><a href="#">STUDENTS</a></h2>
+              							<p>Boys Hostel</p>
+              						</div>
+              						<div class="x_car_offer_heading">
+              							<ul>
+              								<li class="present"><a href="#"><i class="fa fa-users"></i> &nbsp;4</a>
+
+
+                              </li>
+                              <li class="absent"><a href="#"><i class="fa fa-share-square-o"></i> &nbsp;4</a></li>
+              								<li>
+                                <li>
+                                  <a href="#"><i class="fa fa-calendar "></i> <p><strong>FEB</strong>
+              									 02</p></a>
+                               </li>
+                               <li>
+                               <a href="#"><i class="fa fa-clock-o "></i><p><strong>02:00</strong>
+                              PM</p></a>
+                               </li>
+              							</ul>
+              						</div>
+              						<div class="x_car_offer_bottom_btn">
+              							<ul>
+              								<li><a href="/addstudent">&nbsp;<i class="fa fa-plus "></i>&nbsp;</a>
+              								</li>
+              								<li><a href="/showstudent">Show</a>
+              								</li>
+              							</ul>
+              						</div>
+              					</div>
+              				</div>
+              			</div>
+                    <!-- attendance -->
+              			<div class="col-md-3 col-sm-6">
+              				<div class="bsBox">
+              					<div class="x_car_offer_main_boxes_wrapper">
+              						<div class="x_car_offer_starts">
+
+              						</div>
+              						<div class="x_car_offer_img">
+              							<img src="/img/att.png" alt="img">
+              						</div>
+              						<div class="x_car_offer_price">
+              							<div class="x_car_offer_price_inner">
+              							<h6>
+              								<h3>2019</h3>
+              								<p><span>FEB</span>
+              									<br>/ 02</p>
+              							</div>
+              						</div>
+              						<div class="x_car_offer_heading"><br>
+              							<h2><a href="#">ATTENDANCE</a></h2>
+              							<p>Boys Hostel</p>
+              						</div>
+              						<div class="x_car_offer_heading">
+              							<ul>
+              								<li class="present"><a href="#"><i class="fa fa-users"></i> &nbsp;4</a>
+                              </li>
+                              <li class="absent"><a href="#"><i class="fa fa-share-square-o"></i> &nbsp;4</a></li>
+              								<li>
+                                <li>
+                                  <a href="#"><i class="fa fa-calendar "></i> <p><strong>FEB</strong>
+              									 02</p></a>
+                               </li>
+                               <li>
+                               <a href="#"><i class="fa fa-clock-o "></i><p><strong>02:00</strong>
+                              PM</p></a>
+                               </li>
+              							</ul>
+              						</div>
+              						<div class="x_car_offer_bottom_btn">
+              							<ul>
+              								<li><a href="/attendance">&nbsp;<i class="fa fa-plus "></i>&nbsp;</a>
+              								</li>
+              								<li><a href="/absent">Show</a>
+              								</li>
+              							</ul>
+              						</div>
+              					</div>
+              				</div>
+              			</div>
+              		</div>
+              	</div>
+              </div>
+
+
+              <!-- ./GATE PASS-->
+
+          </div>
+      </div>
+  </section>
+
+
+
+
+<!--
 <div class="row">
-    <div class="column">
+    <!-- <div class="column">
         <section class="jumbotron text-center">
             <div class="container">
                 <h1 class="jumbotron-heading">KITCHEN SYSTEM</h1>
@@ -129,8 +321,8 @@
                 </p>
             </div>
         </section>
-    </div>
-    <div class="column">
+    </div> -->
+    <!-- <div class="column">
         <section class="jumbotron text-center">
             <div class="container">
                 <h1 class="jumbotron-heading">FEEDBACK </h1>
@@ -143,107 +335,78 @@
             </div>
         </section>
     </div>
-    <div class="column">
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="jumbotron-heading">MARK ATTENDANCE </h1>
-
-                <p>
-                    <a href="/attendance" class="btn btn-primary my-2">POST ATTENDANCE</a>
-                    <a href="/absent" class="btn btn-secondary my-2">SHOW ABSENTES</a>
-
-                </p>
-            </div>
-        </section>
-    </div>
-
-
-    <div class="column">
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="jumbotron-heading">ADD STUDENT SYSTEM</h1>
-
-                <p>
-                    <a href="/addstudent" class="btn btn-primary my-2">ADD</a>
-                    <a href="/showstudent" class="btn btn-secondary my-2">SHOW STUDENTS</a>
-                </p>
-            </div>
-        </section>
-    </div>
-
-
-    <div class="column">
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="jumbotron-heading">ADD ROOM SYSTEM</h1>
-
-                <p>
-                    <a href="/addroom" class="btn btn-primary my-2">ADD </a>
-                    <a href="/showrooms" class="btn btn-secondary my-2">SHOW ROOMS</a>
-                </p>
-            </div>
-        </section>
-    </div>
-
-
-    <div class="column">
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="jumbotron-heading">GATE PASS</h1>
-                <p>
-                    <a href="/gatepass" class="btn btn-primary my-2">REQUEST</a>
-                    <a href="/approve" class="btn btn-secondary my-2">APPROVE</a>
-                    <a href="/gatecheck" class="btn btn-secondary my-2">APPROVED</a>
-                </p>
-            </div>
-        </section>
-    </div>
 </div>
+ -->
+
 </a>
 <% } else if(currentUser.isWarden){ %>
-<div class="column">
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">MARK ATTENDANCE </h1>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="mainflip">
+              <div class="frontside">
+                  <div class="card">
+                      <div class="card-body text-center">
+                          <p><img class=" img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Check_mark.svg/120px-Check_mark.svg.png" alt="card image"></p>
+                          <h1 class="jumbotron-heading">MARK ATTENDANCE </h1>
 
-            <p>
-                <a href="/attendance" class="btn btn-primary my-2">POST ATTENDANCE</a>
-                <a href="/absent" class="btn btn-secondary my-2">SHOW ABSENTES</a>
+                          <p>
+                              <a href="/attendance" class="btn btn-primary">POST ATTENDANCE</a>
+                              <a href="/absent" class="btn btn-secondary my-2">SHOW ABSENTES</a>
 
-            </p>
-        </div>
-    </section>
-</div>
-
-
-<div class="column">
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">ADD STUDENT SYSTEM</h1>
-
-            <p>
-                <a href="/addstudent" class="btn btn-primary my-2">ADD</a>
-                <a href="/showstudent" class="btn btn-secondary my-2">SHOW STUDENTS</a>
-            </p>
-        </div>
-    </section>
-</div>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  </div>
 
 
-<div class="column">
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">ADD ROOM SYSTEM</h1>
+  <!-- ADD STUDENT SYSTEM -->
 
-            <p>
-                <a href="/addroom" class="btn btn-primary my-2">ADD </a>
-                <a href="/showrooms" class="btn btn-secondary my-2">SHOW ROOMS</a>
-            </p>
-        </div>
-    </section>
-</div>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="mainflip">
+              <div class="frontside">
+                  <div class="card">
+                      <div class="card-body text-center">
+                          <p><img class=" img-fluid" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/mozilla/36/heavy-plus-sign_2795.png" alt="card image"></p>
+                          <h1 class="jumbotron-heading">ADD  STUDENT SYSTEM</h1>
+                          <p>
+                              <a href="/addstudent" class="btn btn-primary my-2">ADD</a>
+                              <a href="/showstudent" class="btn btn-secondary my-2">SHOW STUDENTS</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  </div>
+
+
+  <!-- ./ADD STUDENT SYSTEM -->
+
+
+  <!-- ADD ROOM SYSTEM -->
+
+  <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="mainflip">
+              <div class="frontside">
+                  <div class="card">
+                      <div class="card-body text-center">
+                          <p><img class=" img-fluid" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/mozilla/36/heavy-plus-sign_2795.png" alt="card image"></p>
+                          <h1 class="jumbotron-heading">ADD ROOM SYSTEM</h1>
+
+                          <p>
+                              <a href="/addroom" class="btn btn-primary my-2">ADD </a>
+                              <a href="/showrooms" class="btn btn-secondary my-2">SHOW ROOMS</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  </div>
+
+
+  <!-- ./ADD chef -->
 <% } else if(currentUser.isChef){ %>
-<div class="column">
+<!-- <div class="column">
     <section class="jumbotron text-center">
         <div class="container">
             <h1 class="jumbotron-heading">KITCHEN SYSTEM</h1>
@@ -254,10 +417,13 @@
             </p>
         </div>
     </section>
-</div>
+</div> -->
 
 
 <%}%>
+
+
+
 
 </main>
 </body>

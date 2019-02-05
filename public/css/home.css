@@ -1,0 +1,530 @@
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .checkbox {
+    font-weight: 960;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+/* css for home page after login */
+
+
+
+/* FontAwesome for working BootSnippet :> */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007b5e;
+    border-color: #007b5e;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+
+/* css for butt */
+
+
+
+/*  testing*/
+
+
+
+@import("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+@import("https://fonts.googleapis.com/css?family=Open+Sans");
+
+.bestSnippArea1073,
+.bestSnippArea1073 .bsBox,
+.bestSnippArea1073 .bsBox *{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+.bestSnippArea1073 {
+	display: block;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0px auto;
+}
+
+
+.bestSnippArea1073 .bsBox .x_car_offer_main_boxes_wrapper .fa {
+    font-family: "FontAwesome";
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_main_boxes_wrapper {
+    background: #ffffff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    display: inline-block;
+    width: 100%
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_main_boxes_wrapper:hover {
+    box-shadow: none;
+    border: 2px solid #4f5dec;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_starts {
+    padding: 25px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_starts i {
+    color: #edcc30;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_img,
+.x_car_offer_price {
+    text-align: center;
+    width: 190px;
+    height: 73px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_main_boxes_wrapper:hover .x_car_offer_img {
+    -webkit-animation: movebounce 2.9s linear infinite;
+    animation: movebounce 2.9s linear infinite;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_price_inner {
+    margin-top: 50px;
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    border: 1px solid #eeeeee;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background: #ffffff;
+    z-index: 1;
+    position: relative;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_price {
+    position: relative;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_price:after {
+    content: '';
+    border: 1px solid #eeeeee;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    top: 75px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_price_inner h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: #4f5dec;
+    font-weight: 800;
+    line-height: 50px;
+    display: inline-block;
+    font-style: italic;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_price_inner p {
+    color: #111111;
+    text-transform: uppercase;
+    font-size: 11px;
+    display: inline-block;
+    line-height: 13px;
+    font-weight: 900;
+    font-style: italic;
+    position: relative;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_price_inner p span {
+    position: absolute;
+    font-weight: 100;
+    font-style: normal;
+    left: 4px;
+    font-size: 9px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading {
+    text-align: center;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading h2 {
+    padding-top: 10px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading h2 a {
+    font-size: 16px;
+    color: #111111;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading h2 a:hover {
+    color: #4f5dec;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading ul {
+    width: 100%;
+    float: left;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    margin-top: 30px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading li {
+    float: left;
+    width: 25%;
+    border-left: 1px solid #eeeeee;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading li a {
+    float: left;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #666;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading li:first-child {
+    border-left: 0;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading li a i {
+    color: #4f5dec;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading .nice-select {
+    border: 0;
+    border-radius: 0;
+    display: inline-block;
+    float: none;
+    background: transparent;
+    line-height: 50px;
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading .nice-select:after {
+    border-bottom: 1px solid #c6c8cb;
+    border-right: 1px solid #c6c8cb;
+    content: '';
+    display: block;
+    height: 6px;
+    margin-top: -2px;
+    pointer-events: none;
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    -webkit-transform-origin: 66% 66%;
+    -ms-transform-origin: 66% 66%;
+    transform-origin: 66% 66%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    width: 6px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading .nice-select .list {
+    left: auto;
+    right: 10px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading .current {
+    color: #4f5dec;
+    font-size: 18px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading .list {
+    width: 210px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading i:before {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.bestSnippArea1073 .bsBox .current i {
+    position: relative;
+    top: -3px;
+}
+
+.bestSnippArea1073 .bsBox .dpopy_li {
+    float: left;
+    width: 100% !important;
+    border-left: 0 !important;
+}
+
+.bestSnippArea1073 .bsBox .dpopy_li a {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_bottom_btn {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_bottom_btn li {
+    width: 50%;
+    float: left;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_bottom_btn ul {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    float: left;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_bottom_btn li:first-child a {
+    float: left;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: #4f5dec;
+    color: #ffffff;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_bottom_btn li:first-child a:hover {
+    background: #232121;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_bottom_btn li:last-child a {
+    float: left;
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    background: #111111;
+    color: #ffffff;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_bottom_btn li:last-child a:hover {
+    background: #414dce;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_price {
+    position: relative;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_price h6 {
+    color: #4f5dec;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -35px;
+    margin: 0px auto;
+    font-size: 14px;
+}
+
+.bestSnippArea1073 .bsBox .nice-select {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #fff;
+    border-radius: 5px;
+    border: solid 1px #e8e8e8;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+}
+
+.bestSnippArea1073 .bsBox .nice-select:hover {
+    border-color: #dbdbdb;
+}
+
+.bestSnippArea1073 .bsBox .nice-select:active,
+.nice-select:focus {
+    border-color: #999;
+}
+
+.bestSnippArea1073 .bsBox .nice-select:after {
+    border-bottom: 2px solid #999;
+    border-right: 2px solid #999;
+    content: '';
+    display: block;
+    height: 5px;
+    margin-top: -4px;
+    pointer-events: none;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    -webkit-transform-origin: 66% 66%;
+    -ms-transform-origin: 66% 66%;
+    transform-origin: 66% 66%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    width: 5px;
+}
+
+.bestSnippArea1073 .bsBox .nice-select .list {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: scale(0.75) translateY(-21px);
+    -ms-transform: scale(0.75) translateY(-21px);
+    transform: scale(0.75) translateY(-21px);
+    -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    z-index: 9;
+}
+
+.bestSnippArea1073 .bsBox .nice-select:hover&gt;.list {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scale(1) translateY(0);
+    -ms-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_main_boxes_wrapper a {
+    text-decoration: none;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_main_boxes_wrapper ul {
+    list-style-type: none;
+}
+
+.bestSnippArea1073 .bsBox .x_car_offer_heading p {
+    font-size: 14px;
+}
+.present{
+  background-color: #ede6ad;
+  color: white;
+}
+.absent{
+  background-color: #9ed0e2;
+
+}
+@keyframes movebounce {
+  0% {
+    transform: translateX(0px); }
+  50% {
+    transform: translateX(20px); }
+  100% {
+    transform: translateX(0px); }
+}
+@keyframes moveleftbounce {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(20px); }
+  100% {
+    transform: translateY(0px); }
+}

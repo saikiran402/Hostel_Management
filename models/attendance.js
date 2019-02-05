@@ -4,11 +4,8 @@ const AttendanceSchema = new mongoose.Schema({
   attendance:{
       date:{type:Date,default:Date.now},
       attendance:[{
-          id:{
-              type: mongoose.Schema.Types.ObjectId,
-              ref: "Student"
-          },
-          attendance:{type:Boolean,default:true}
+          roll:String,
+          attendance:{type:Boolean}
       }]
   }
 });

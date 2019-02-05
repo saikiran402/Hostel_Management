@@ -9,86 +9,57 @@
     <title>Hostel Management</title>
     <link href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-        }
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/header.css">
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        html {
-            overflow: scroll;
-            overflow-x: hidden;
-        }
-
-        ::-webkit-scrollbar {
-            width: 0px;
-            background: transparent;
-        }
-    </style>
 
 </head>
 
 <body>
 
     <header>
-        <div class="collapse bg-dark" id="navbarHeader">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-md-7 py-4">
-                        <h4 class="text-white">About</h4>
-                        <p class="text-muted"></p>
-                    </div>
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Menu</h4>
-                        <ul class="list-unstyled">
-                            <% if (!currentUser) { %>
-                            <a class="text-white" href="/login">
-                                <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>  ">Login</li>
-                            </a>
-                            <a class="text-white" href="/register">
-                                <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>">Sign
-                                    Up</li>
-                            </a>
-                            <% } else { %>
-                            <% if (currentUser.isAdmin) { %>
-                            <a class="text-white" href="#<%= currentUser._id %>">
-                                <li>Admin.
-                                    <%= currentUser.username %>
-                                </li>
-                            </a>
-                            <% } else { %>
-                            <a class="text-white" href="/">
-                                <li class="<%= typeof page !== 'undefined' && page === 'home' ? 'active' : '' %> ">Dashboard</li>
-                            </a>
-                            <a class="text-white" href="#<%= currentUser._id %>">
-                                <li>Hi,
-                                    <%= currentUser.username %>
-                                </li>
-                            </a>
-                            <% } %>
-                            <li><a href="/logout" class="text-white">Logout</a></li>
-                            <% } %>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container d-flex justify-content-between">
-                <a href="/" class="navbar-brand d-flex align-items-center">
-                    
+                <a href="/" class="navbar-brand d-flex align-items-right">
+
                     <strong>HOSTEL</strong>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="dropdown">
+                    <button class="dropbtn">  <i class="fa fa-fw fa-home"></i></button>
+                    <!-- list of drop dropdown -->
+                    <div class="dropdown-content">
+                      <ul class="list-unstyled">
+                          <% if (!currentUser) { %>
+                          <a  href="#nav-home">
+                              <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>  ">STUDENT Login</li>
+                          </a>
+                          <a class="" href="/register">
+                              <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>">Sign
+                                  Up</li>
+                          </a>
+                          <% } else { %>
+                          <% if (currentUser.isAdmin) { %>
+                          <a class="text-black" href="#<%= currentUser._id %>">
+                              <li>Admin.
+                                  <%= currentUser.username %>
+                              </li>
+                          </a>
+                          <% } else { %>
+                          <a class="text-black" href="/">
+                              <li class="<%= typeof page !== 'undefined' && page === 'home' ? 'active' : '' %> ">Dashboard</li>
+                          </a>
+                          <a class="text-black" href="#<%= currentUser._id %>">
+                              <li>Hi,
+                                  <%= currentUser.username %>
+                              </li>
+                          </a>
+                          <% } %>
+                          <li><a href="/logout" class="text-black">Logout</a></li>
+                          <% } %>
+                      </ul>
+                    </div>
             </div>
         </div>
     </header>
